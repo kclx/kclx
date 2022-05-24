@@ -1,0 +1,8 @@
+如果你只需要删除磁盘上的 .DS_Store，可以使⽤下⾯的命令来删除当前⽬录及其⼦⽬录下的所有.DS_Store ⽂件
+find . -name '*.DS_Store' -type f -delete
+
+恢复DS生成
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+
+禁止DS生成
+defaults delete com.apple.desktopservices DSDontWriteNetworkStores
